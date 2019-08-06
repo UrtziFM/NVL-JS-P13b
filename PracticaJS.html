@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practica Javascript</title>
+        <link type="text/css" rel="stylesheet" href="final.css">
+    </head>
+    <script>
+    document.write("Urtzi! show me!");
+    </script>
+    <script>
+        var palabra_introducida = prompt("Escribir una palabra", "ama");
+        
+        function palindromo_palabra(palabra_introducida){
+            palabra_introducida = palabra_introducida.toLowerCase().replace(/\s/g,"");
+            palabra_reverse = palabra_introducida.split("").reverse().toString();
+            
+            for (var i = 0; i < ((palabra_reverse.length)-1); i++) {
+                palabra_reverse = palabra_reverse.replace(",","");
+            };
+            if (palabra_introducida == palabra_reverse) {
+                resultado = "es un palindromo";
+            }
+            else {
+                resultado = "no es unpalindromo";
+            }
+            alert("Tu palabra " + resultado);
+        }
+        palindromo_palabra(palabra_introducida);
+    </script>
+</html>
